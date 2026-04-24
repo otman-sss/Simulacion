@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Tres en Línea - Personalizable</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Tres en Línea</h1>
+        
+        <!-- Panel de configuración -->
+        <div class="config-panel">
+            <div class="config-group">
+                <label>🎨 Imagen Jugador 1 (X):</label>
+                <select id="imgX">
+                    <option value="❌">❌ Cruz</option>
+                    <option value="🐱">🐱 Gato</option>
+                    <option value="⭐">⭐ Estrella</option>
+                </select>
+            </div>
+            <div class="config-group">
+                <label>🎨 Imagen Jugador 2 (O):</label>
+                <select id="imgO">
+                    <option value="⭕">⭕ Círculo</option>
+                    <option value="🐶">🐶 Perro</option>
+                    <option value="🌟">🌟 Cometa</option>
+                </select>
+            </div>
+            <div class="config-group">
+                <label>🎨 Color celda par (ej: 0,2,4,6,8):</label>
+                <input type="color" id="cellColorEven" value="#f0f8ff">
+            </div>
+            <div class="config-group">
+                <label>🎨 Color celda impar (ej: 1,3,5,7):</label>
+                <input type="color" id="cellColorOdd" value="#e6e6fa">
+            </div>
+            <div class="config-group">
+                <label>📏 Color líneas intermedias:</label>
+                <input type="color" id="gridLineColor" value="#333333">
+            </div>
+            <div class="config-group">
+                <label>🏆 Color línea ganadora:</label>
+                <input type="color" id="winLineColor" value="#ff4500">
+            </div>
+            <button id="applyConfigBtn">Aplicar configuración</button>
+            <button id="resetGameBtn">🔄 Reiniciar juego</button>
+        </div>
+
+        <!-- Temporizador y estado -->
+        <div class="game-info">
+            <div class="timer">⏱️ Tiempo restante: <span id="timerDisplay">03:00</span></div>
+            <div class="turn-indicator">Turno: <span id="turnText">Jugador 1 (X)</span></div>
+            <div id="gameStatus" class="status">Juego en curso...</div>
+        </div>
+
+        <!-- Tablero 3x3 -->
+        <div class="board" id="board">
+            <!-- 9 celdas se generarán con JS, pero las creamos manualmente en HTML para que sean estáticas -->
+        </div>
+
+        <div class="winner-message" id="winnerMessage"></div>
+        <button id="newGameBtn" class="new-game">➕ Nueva partida</button>
+    </div>
+
+    <script src="JS/functions.js"></script>
+</body>
+</html>

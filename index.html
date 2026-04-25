@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal - Algoritmos y Estructuras de Datos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .menu-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #a8dadc;
+            margin-bottom: 50px;
+            font-size: 1.1em;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .card-icon {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5em;
+        }
+
+        .card-icon.reinas { background: linear-gradient(135deg, #ff6b6b, #ee5a24); }
+        .card-icon.tictactoe { background: linear-gradient(135deg, #4ecdc4, #44bd9e); }
+        .card-icon.ilusiones { background: linear-gradient(135deg, #a8e6cf, #3b82f6); }
+        .card-icon.sierpinski { background: linear-gradient(135deg, #ff9a9e, #fecfef); }
+
+        .card-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-content h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .btn-arrow {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #667eea;
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .menu-card:hover .btn-arrow {
+            background: #764ba2;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #a8dadc;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .menu-grid {
+                gap: 20px;
+                padding: 10px;
+            }
+            
+            .card-icon {
+                height: 150px;
+                font-size: 3.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>🎓 Algoritmos y Estructuras de Datos</h1>
+        <div class="subtitle">Selecciona una opción para acceder al programa</div>
+        
+        <div class="menu-grid">
+            <!-- Opción 1: 8 Reinas -->
+            <a href="8reinas.html" class="menu-card">
+                <div class="card-icon reinas">👑</div>
+                <div class="card-content">
+                    <h2>8 Reinas</h2>
+                    <p>Problema clásico de backtracking. Coloca 8 reinas sin que se amenacen entre sí.</p>
+                    <span class="btn-arrow">Acceder →</span>
+                </div>
+            </a>
+
+            <!-- Opción 2: Tic Tac Toe -->
+            <a href="tictactoe.html" class="menu-card">
+                <div class="card-icon tictactoe">⭕</div>
+                <div class="card-content">
+                    <h2>Tic Tac Toe</h2>
+                    <p>El clásico juego del Gato (Tres en línea). Juega contra otro jugador.</p>
+                    <span class="btn-arrow">Acceder →</span>
+                </div>
+            </a>
+
+            <!-- Opción 3: Ilusiones Ópticas -->
+            <a href="ilusiones.html" class="menu-card">
+                <div class="card-icon ilusiones">✨</div>
+                <div class="card-content">
+                    <h2>Ilusiones Ópticas</h2>
+                    <p>Explora fascinantes ilusiones visuales generadas por computadora.</p>
+                    <span class="btn-arrow">Acceder →</span>
+                </div>
+            </a>
+
+            <!-- Opción 4: Triángulo de Sierpinski -->
+            <a href="sierpinski.html" class="menu-card">
+                <div class="card-icon sierpinski">🔺</div>
+                <div class="card-content">
+                    <h2>Triángulo de Sierpinski</h2>
+                    <p>Fractal generado por el método del caos (juego del dado).</p>
+                    <span class="btn-arrow">Acceder →</span>
+                </div>
+            </a>
+        </div>
+        
+        <footer>
+            Unidad Didáctica 1 - Introducción a los Algoritmos y Estructuras de Datos
+        </footer>
+    </div>
+</body>
+</html>

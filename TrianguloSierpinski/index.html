@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triángulo de Sierpinski - Método del Caos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔺 Triángulo de Sierpinski</h1>
+        <p class="subtitle">Método del Caos - Juego del Dado</p>
+        
+        <div class="info-panel">
+            <div class="info-box">
+                <h3>🎲 Último dado</h3>
+                <div class="dice-number" id="diceNumber">-</div>
+            </div>
+            <div class="info-box">
+                <h3>🔄 Iteraciones</h3>
+                <div class="iteration-number" id="iterationCount">0</div>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="sierpinskiCanvas" width="800" height="700"></canvas>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">▶ Iniciar</button>
+            <button id="pauseBtn" class="btn btn-secondary" disabled>⏸ Pausar</button>
+            <button id="resetBtn" class="btn btn-danger">🗑 Resetear</button>
+            <button id="stepBtn" class="btn btn-info">👣 Paso a paso</button>
+        </div>
+
+        <div class="speed-control">
+            <label>⚡ Velocidad: </label>
+            <input type="range" id="speedSlider" min="1" max="100" value="50">
+            <span id="speedValue">50</span> ms
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="color-box vertex1"></div>
+                <span>Vértice 1 (0,0)</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box vertex2"></div>
+                <span>Vértice 2 (400,0)</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box vertex3"></div>
+                <span>Vértice 3 (200,606)</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box point"></div>
+                <span>Puntos generados</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/functions.js"></script>
+</body>
+</html>
